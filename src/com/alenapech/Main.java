@@ -18,7 +18,7 @@ public class Main {
         System.out.println(player1);
         System.out.println(player2);
         int i = 0;
-        while(!player1.isEmpty() && !player2.isEmpty() && i < 10) {
+        while(!player1.isEmpty() && !player2.isEmpty() && i < 100000) {
             System.out.println(player1);
             System.out.println(player2);
             int p1 = player1.poll();
@@ -33,6 +33,9 @@ public class Main {
                 throw new Exception("Impossible Case");
             }
             i++;
+        }
+        if (i == 100000 - 1) {
+            System.out.println("botva");
         }
         System.out.println((player1.isEmpty() ? "Second" : "First") + " " + i);
     }
